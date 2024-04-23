@@ -1,6 +1,6 @@
 ﻿namespace SegundoProyectoVisualStudio
 {
-    partial class BuscarMultiple
+    partial class InsertarSede
     {
         /// <summary>
         /// Required designer variable.
@@ -40,173 +40,114 @@
             textBox5 = new TextBox();
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            label6 = new Label();
-            textBox6 = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(21, 56);
+            label1.Location = new Point(19, 22);
             label1.Name = "label1";
-            label1.Size = new Size(62, 15);
+            label1.Size = new Size(20, 15);
             label1.TabIndex = 0;
-            label1.Text = "Id usuario:";
+            label1.Text = "Id:";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 89);
+            label2.Location = new Point(19, 53);
             label2.Name = "label2";
-            label2.Size = new Size(54, 15);
+            label2.Size = new Size(60, 15);
             label2.TabIndex = 1;
-            label2.Text = "Nombre:";
+            label2.Text = "Dirección:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 119);
+            label3.Location = new Point(19, 81);
             label3.Name = "label3";
-            label3.Size = new Size(51, 15);
+            label3.Size = new Size(48, 15);
             label3.TabIndex = 2;
-            label3.Text = "Apelido:";
+            label3.Text = "Ciudad:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(21, 150);
+            label4.Location = new Point(19, 114);
             label4.Name = "label4";
-            label4.Size = new Size(118, 15);
+            label4.Size = new Size(100, 15);
             label4.TabIndex = 3;
-            label4.Text = "Fecha de inscripción:";
+            label4.Text = "Fecha de registro:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(21, 181);
+            label5.Location = new Point(19, 144);
             label5.Name = "label5";
-            label5.Size = new Size(78, 15);
+            label5.Size = new Size(62, 15);
             label5.TabIndex = 4;
-            label5.Text = "Mensualidad:";
+            label5.Text = "Área (m2):";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(152, 48);
+            textBox1.Location = new Point(139, 12);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(197, 23);
+            textBox1.Size = new Size(179, 23);
             textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(152, 81);
+            textBox2.Location = new Point(139, 43);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(197, 23);
+            textBox2.Size = new Size(179, 23);
             textBox2.TabIndex = 6;
             // 
             // textBox3
             // 
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(152, 111);
+            textBox3.Location = new Point(139, 73);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(197, 23);
+            textBox3.Size = new Size(179, 23);
             textBox3.TabIndex = 7;
             // 
             // textBox4
             // 
-            textBox4.Enabled = false;
-            textBox4.Location = new Point(152, 142);
+            textBox4.Location = new Point(139, 106);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(197, 23);
+            textBox4.Size = new Size(179, 23);
             textBox4.TabIndex = 8;
             // 
             // textBox5
             // 
-            textBox5.Enabled = false;
-            textBox5.Location = new Point(152, 171);
+            textBox5.Location = new Point(139, 136);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(197, 23);
+            textBox5.Size = new Size(179, 23);
             textBox5.TabIndex = 9;
             // 
             // button1
             // 
-            button1.Location = new Point(374, 16);
+            button1.Location = new Point(84, 181);
             button1.Name = "button1";
-            button1.Size = new Size(86, 23);
+            button1.Size = new Size(75, 23);
             button1.TabIndex = 10;
-            button1.Text = "Buscar por Id";
+            button1.Text = "Guardar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(374, 48);
+            button2.Location = new Point(178, 181);
             button2.Name = "button2";
-            button2.Size = new Size(120, 23);
+            button2.Size = new Size(75, 23);
             button2.TabIndex = 11;
-            button2.Text = "Buscar por nombre";
+            button2.Text = "Regresar";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += button2_Click_1;
             // 
-            // button3
-            // 
-            button3.Location = new Point(374, 78);
-            button3.Name = "button3";
-            button3.Size = new Size(142, 25);
-            button3.TabIndex = 12;
-            button3.Text = "Buscar por Id y Nombre";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(187, 212);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 13;
-            button4.Text = "Limpiar";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(275, 212);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 14;
-            button5.Text = "Regresar";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(21, 25);
-            label6.Name = "label6";
-            label6.Size = new Size(47, 15);
-            label6.TabIndex = 15;
-            label6.Text = "Id sede:";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(152, 17);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(110, 23);
-            textBox6.TabIndex = 16;
-            // 
-            // BuscarMultiple
+            // InsertarSede
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(555, 251);
-            Controls.Add(textBox6);
-            Controls.Add(label6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            ClientSize = new Size(345, 217);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox5);
@@ -219,9 +160,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "BuscarMultiple";
+            Name = "InsertarSede";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Buscar multiple";
+            Text = "Insertar sede";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -240,10 +181,5 @@
         private TextBox textBox5;
         private Button button1;
         private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Label label6;
-        private TextBox textBox6;
     }
 }

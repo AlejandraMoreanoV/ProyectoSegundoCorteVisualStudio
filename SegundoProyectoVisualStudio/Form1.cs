@@ -53,5 +53,35 @@ namespace SegundoProyectoVisualStudio
         {
 
         }
+
+        private void insertarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            InsertarSede insertarSede = new InsertarSede();
+            insertarSede.ShowDialog();
+        }
+
+        private void buscarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BuscarSede buscarSede = new BuscarSede();
+            buscarSede.ShowDialog();
+        }
+
+        private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EliminarSede eliminarSede = new EliminarSede();
+            eliminarSede.ShowDialog();
+        }
+
+        private void actualizarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ActualizarSede actualizar = new ActualizarSede();
+            actualizar.ShowDialog();
+        }
+
+        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ListarSedes listarSedes = new ListarSedes();
+            listarSedes.ShowDialog();
+        }
     }
 }

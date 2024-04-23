@@ -32,6 +32,12 @@
             menuStrip1 = new MenuStrip();
             archivoToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
+            sedeToolStripMenuItem = new ToolStripMenuItem();
+            insertarToolStripMenuItem1 = new ToolStripMenuItem();
+            buscarToolStripMenuItem1 = new ToolStripMenuItem();
+            actualizarToolStripMenuItem1 = new ToolStripMenuItem();
+            eliminarToolStripMenuItem1 = new ToolStripMenuItem();
+            listarToolStripMenuItem1 = new ToolStripMenuItem();
             usuarioToolStripMenuItem = new ToolStripMenuItem();
             insertarToolStripMenuItem = new ToolStripMenuItem();
             buscarToolStripMenuItem = new ToolStripMenuItem();
@@ -47,7 +53,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, usuarioToolStripMenuItem, ayudaToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, sedeToolStripMenuItem, usuarioToolStripMenuItem, ayudaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -68,6 +74,48 @@
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
+            // sedeToolStripMenuItem
+            // 
+            sedeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { insertarToolStripMenuItem1, buscarToolStripMenuItem1, actualizarToolStripMenuItem1, eliminarToolStripMenuItem1, listarToolStripMenuItem1 });
+            sedeToolStripMenuItem.Name = "sedeToolStripMenuItem";
+            sedeToolStripMenuItem.Size = new Size(44, 20);
+            sedeToolStripMenuItem.Text = "Sede";
+            // 
+            // insertarToolStripMenuItem1
+            // 
+            insertarToolStripMenuItem1.Name = "insertarToolStripMenuItem1";
+            insertarToolStripMenuItem1.Size = new Size(180, 22);
+            insertarToolStripMenuItem1.Text = "Insertar";
+            insertarToolStripMenuItem1.Click += insertarToolStripMenuItem1_Click;
+            // 
+            // buscarToolStripMenuItem1
+            // 
+            buscarToolStripMenuItem1.Name = "buscarToolStripMenuItem1";
+            buscarToolStripMenuItem1.Size = new Size(180, 22);
+            buscarToolStripMenuItem1.Text = "Buscar";
+            buscarToolStripMenuItem1.Click += buscarToolStripMenuItem1_Click;
+            // 
+            // actualizarToolStripMenuItem1
+            // 
+            actualizarToolStripMenuItem1.Name = "actualizarToolStripMenuItem1";
+            actualizarToolStripMenuItem1.Size = new Size(180, 22);
+            actualizarToolStripMenuItem1.Text = "Actualizar";
+            actualizarToolStripMenuItem1.Click += actualizarToolStripMenuItem1_Click;
+            // 
+            // eliminarToolStripMenuItem1
+            // 
+            eliminarToolStripMenuItem1.Name = "eliminarToolStripMenuItem1";
+            eliminarToolStripMenuItem1.Size = new Size(180, 22);
+            eliminarToolStripMenuItem1.Text = "Eliminar";
+            eliminarToolStripMenuItem1.Click += eliminarToolStripMenuItem1_Click;
+            // 
+            // listarToolStripMenuItem1
+            // 
+            listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
+            listarToolStripMenuItem1.Size = new Size(180, 22);
+            listarToolStripMenuItem1.Text = "Listar";
+            listarToolStripMenuItem1.Click += listarToolStripMenuItem1_Click;
+            // 
             // usuarioToolStripMenuItem
             // 
             usuarioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { insertarToolStripMenuItem, buscarToolStripMenuItem, actualizarToolStripMenuItem, eliminarToolStripMenuItem, listarToolStripMenuItem });
@@ -78,35 +126,35 @@
             // insertarToolStripMenuItem
             // 
             insertarToolStripMenuItem.Name = "insertarToolStripMenuItem";
-            insertarToolStripMenuItem.Size = new Size(180, 22);
+            insertarToolStripMenuItem.Size = new Size(126, 22);
             insertarToolStripMenuItem.Text = "Insertar";
             insertarToolStripMenuItem.Click += insertarToolStripMenuItem_Click;
             // 
             // buscarToolStripMenuItem
             // 
             buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            buscarToolStripMenuItem.Size = new Size(180, 22);
+            buscarToolStripMenuItem.Size = new Size(126, 22);
             buscarToolStripMenuItem.Text = "Buscar";
             buscarToolStripMenuItem.Click += buscarToolStripMenuItem_Click;
             // 
             // actualizarToolStripMenuItem
             // 
             actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            actualizarToolStripMenuItem.Size = new Size(180, 22);
+            actualizarToolStripMenuItem.Size = new Size(126, 22);
             actualizarToolStripMenuItem.Text = "Actualizar";
             actualizarToolStripMenuItem.Click += actualizarToolStripMenuItem_Click;
             // 
             // eliminarToolStripMenuItem
             // 
             eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            eliminarToolStripMenuItem.Size = new Size(180, 22);
+            eliminarToolStripMenuItem.Size = new Size(126, 22);
             eliminarToolStripMenuItem.Text = "Eliminar";
             eliminarToolStripMenuItem.Click += eliminarToolStripMenuItem_Click;
             // 
             // listarToolStripMenuItem
             // 
             listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            listarToolStripMenuItem.Size = new Size(180, 22);
+            listarToolStripMenuItem.Size = new Size(126, 22);
             listarToolStripMenuItem.Text = "Listar";
             listarToolStripMenuItem.Click += listarToolStripMenuItem_Click;
             // 
@@ -166,5 +214,11 @@
         private ToolStripMenuItem ayudaToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
         private ToolStripMenuItem actualizarToolStripMenuItem;
+        private ToolStripMenuItem sedeToolStripMenuItem;
+        private ToolStripMenuItem insertarToolStripMenuItem1;
+        private ToolStripMenuItem buscarToolStripMenuItem1;
+        private ToolStripMenuItem actualizarToolStripMenuItem1;
+        private ToolStripMenuItem eliminarToolStripMenuItem1;
+        private ToolStripMenuItem listarToolStripMenuItem1;
     }
 }

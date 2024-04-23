@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -53,7 +54,6 @@ namespace SegundoProyectoVisualStudio
             dataGridView1.Rows[n].Cells[3].Value = jsonObj.fechaInscripcion.ToString();
             dataGridView1.Rows[n].Cells[4].Value = jsonObj.mensualidad.ToString();
             */
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,24 +70,39 @@ namespace SegundoProyectoVisualStudio
         {
             var options = new RestClientOptions("http://localhost:8080");
             var client = new RestClient(options);
-            var request = new RestRequest($"/controladorUsuario/listarUsuarios", Method.Get);
+            var request = new RestRequest($"/usuario/{textBox2.Text}", Method.Get);
             RestResponse result = client.Execute(request);
             //MessageBox.Show(result.Content);
-
-            if (result.StatusCode == HttpStatusCode.OK)
+            if (textBox2.Text.Trim() == "") {
+                MessageBox.Show("No ha ingresado el Id de la sede.", "Información");
+            }
+            else if (result.StatusCode == HttpStatusCode.OK)
             {
-                List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(result.Content);
-                dataGridView1.Rows.Clear();
-
-                // Itera sobre la lista de usuarios y los agrega al DataGridView
-                foreach (var usuario in usuarios)
+                try
                 {
-                    int n = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[n].Cells[0].Value = usuario.id;
-                    dataGridView1.Rows[n].Cells[1].Value = usuario.nombre;
-                    dataGridView1.Rows[n].Cells[2].Value = usuario.apellido;
-                    dataGridView1.Rows[n].Cells[3].Value = usuario.fechaInscripcion.ToString();
-                    dataGridView1.Rows[n].Cells[4].Value = usuario.mensualidad.ToString();
+                    List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(result.Content);
+                    if (usuarios.Count > 0)
+                    {
+                        dataGridView1.Rows.Clear();
+                        // Itera sobre la lista de usuarios y los agrega al DataGridView
+                        foreach (var usuario in usuarios)
+                        {
+                            int n = dataGridView1.Rows.Add();
+                            dataGridView1.Rows[n].Cells[0].Value = usuario.id;
+                            dataGridView1.Rows[n].Cells[1].Value = usuario.nombre;
+                            dataGridView1.Rows[n].Cells[2].Value = usuario.apellido;
+                            dataGridView1.Rows[n].Cells[3].Value = usuario.fechaInscripcion.ToString();
+                            dataGridView1.Rows[n].Cells[4].Value = usuario.mensualidad.ToString();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay usuarios para mostrar.");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No hay usuarios para mostrar.");
                 }
             }
         }
@@ -96,27 +111,44 @@ namespace SegundoProyectoVisualStudio
         {
             var options = new RestClientOptions("http://localhost:8080");
             var client = new RestClient(options);
-            var request = new RestRequest($"/controladorUsuario/listarUsuarios/{textBox1.Text}", Method.Get);
+            var request = new RestRequest($"/usuario/filtrar/{textBox2.Text}/{textBox1.Text}", Method.Get);
             RestResponse result = client.Execute(request);
             //MessageBox.Show(result.Content);
-            if (textBox1.Text.Trim() == "")
+
+            if (textBox2.Text.Trim() == "")
+            {
+                MessageBox.Show("No ha ingresado el Id de la sede.", "Información");
+            }
+            else if (textBox1.Text.Trim() == "")
             {
                 MessageBox.Show($"No ha ingresado el nombre por el cual quiere filtrar la lista de usuarios.", "Información");
             }
             else if (result.StatusCode == HttpStatusCode.OK)
             {
-                List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(result.Content);
-                dataGridView1.Rows.Clear();
-
-                // Itera sobre la lista de usuarios y los agrega al DataGridView
-                foreach (var usuario in usuarios)
+                try
                 {
-                    int n = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[n].Cells[0].Value = usuario.id;
-                    dataGridView1.Rows[n].Cells[1].Value = usuario.nombre;
-                    dataGridView1.Rows[n].Cells[2].Value = usuario.apellido;
-                    dataGridView1.Rows[n].Cells[3].Value = usuario.fechaInscripcion.ToString();
-                    dataGridView1.Rows[n].Cells[4].Value = usuario.mensualidad.ToString();
+                    List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(result.Content);
+                    if (usuarios.Count > 0)
+                    {
+                        dataGridView1.Rows.Clear();
+                        // Itera sobre la lista de usuarios y los agrega al DataGridView
+                        foreach (var usuario in usuarios)
+                        {
+                            int n = dataGridView1.Rows.Add();
+                            dataGridView1.Rows[n].Cells[0].Value = usuario.id;
+                            dataGridView1.Rows[n].Cells[1].Value = usuario.nombre;
+                            dataGridView1.Rows[n].Cells[2].Value = usuario.apellido;
+                            dataGridView1.Rows[n].Cells[3].Value = usuario.fechaInscripcion.ToString();
+                            dataGridView1.Rows[n].Cells[4].Value = usuario.mensualidad.ToString();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay usuarios para mostrar.");
+                    }
+                }
+                catch (Exception) {
+                    MessageBox.Show("No hay usuarios para mostrar.");
                 }
             }
             else

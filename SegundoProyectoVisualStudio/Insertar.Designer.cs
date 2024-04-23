@@ -40,21 +40,23 @@
             button1 = new Button();
             button2 = new Button();
             textBox5 = new TextBox();
+            label6 = new Label();
+            textBox6 = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 33);
+            label1.Location = new Point(25, 51);
             label1.Name = "label1";
-            label1.Size = new Size(20, 15);
+            label1.Size = new Size(62, 15);
             label1.TabIndex = 0;
-            label1.Text = "Id:";
+            label1.Text = "Id usuario:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 64);
+            label2.Location = new Point(25, 82);
             label2.Name = "label2";
             label2.Size = new Size(54, 15);
             label2.TabIndex = 1;
@@ -62,14 +64,14 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(148, 25);
+            textBox1.Location = new Point(148, 43);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(148, 56);
+            textBox2.Location = new Point(148, 74);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 3;
@@ -77,7 +79,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(25, 99);
+            label3.Location = new Point(25, 117);
             label3.Name = "label3";
             label3.Size = new Size(54, 15);
             label3.TabIndex = 4;
@@ -85,14 +87,14 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(148, 91);
+            textBox3.Location = new Point(148, 109);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 5;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(148, 125);
+            textBox4.Location = new Point(148, 143);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 6;
@@ -100,7 +102,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(25, 133);
+            label4.Location = new Point(25, 151);
             label4.Name = "label4";
             label4.Size = new Size(118, 15);
             label4.TabIndex = 7;
@@ -109,7 +111,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(25, 168);
+            label5.Location = new Point(25, 186);
             label5.Name = "label5";
             label5.Size = new Size(78, 15);
             label5.TabIndex = 8;
@@ -117,7 +119,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(67, 205);
+            button1.Location = new Point(67, 217);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 9;
@@ -127,7 +129,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(148, 205);
+            button2.Location = new Point(148, 217);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 10;
@@ -137,16 +139,34 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(148, 160);
+            textBox5.Location = new Point(148, 178);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(100, 23);
             textBox5.TabIndex = 11;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(25, 19);
+            label6.Name = "label6";
+            label6.Size = new Size(47, 15);
+            label6.TabIndex = 12;
+            label6.Text = "Id sede:";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(148, 11);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(100, 23);
+            textBox6.TabIndex = 13;
             // 
             // Insertar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(288, 251);
+            ClientSize = new Size(288, 257);
+            Controls.Add(textBox6);
+            Controls.Add(label6);
             Controls.Add(textBox5);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -161,7 +181,7 @@
             Controls.Add(label1);
             Name = "Insertar";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Insertar";
+            Text = "Insertar usuario";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,5 +200,7 @@
         private Button button1;
         private Button button2;
         private TextBox textBox5;
+        private Label label6;
+        private TextBox textBox6;
     }
 }

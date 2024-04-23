@@ -37,18 +37,19 @@ namespace SegundoProyectoVisualStudio
             textBox3.ResetText();
             textBox4.ResetText();
             textBox5.ResetText();
+            textBox6.ResetText();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var options = new RestClientOptions("http://localhost:8080");
             var client = new RestClient(options);
-            var request = new RestRequest($"/controladorUsuario/buscarUsuarioId/{textBox1.Text}", Method.Get);
+            var request = new RestRequest($"/usuario/id/{textBox6.Text}/{textBox1.Text}", Method.Get);
             RestResponse result = client.Execute(request);
 
-            if (textBox1.Text.Trim() == "")
+            if (textBox1.Text.Trim() == "" || textBox6.Text.Trim() == "")
             {
-                MessageBox.Show("Por favor digite el Id del usuario que desea consultar.", "Precaución");
+                MessageBox.Show("Por favor digite el Id de la sede y del usuario que desea consultar.", "Precaución");
             }
             else if (result.StatusCode == HttpStatusCode.NotFound)
             {
@@ -62,8 +63,12 @@ namespace SegundoProyectoVisualStudio
                 textBox4.Text = jsonObj.fechaInscripcion.ToString();
                 textBox5.Text = jsonObj.mensualidad.ToString();
             }
+            else if (result.StatusCode == HttpStatusCode.NotFound)
+            {
+                MessageBox.Show("Usuario no encontrado.", "Error");
+            }
             else {
-                MessageBox.Show("Id inválido.", "Error");
+                MessageBox.Show("Id inválido(s).", "Error");
             }
         }
 
@@ -71,13 +76,13 @@ namespace SegundoProyectoVisualStudio
         {
             var options = new RestClientOptions("http://localhost:8080");
             var client = new RestClient(options);
-            var request = new RestRequest($"/controladorUsuario/buscarUsuarioNombre/{textBox2.Text}", Method.Get);
+            var request = new RestRequest($"/usuario/nombre/{textBox6.Text}/{textBox2.Text}", Method.Get);
 
             RestResponse result = client.Execute(request);
 
-            if (textBox2.Text.Trim() == "")
+            if (textBox2.Text.Trim() == "" || textBox6.Text.Trim() == "")
             {
-                MessageBox.Show("Por favor digite el nombre del usuario que desea consultar.", "Precaución");
+                MessageBox.Show("Por favor digite el Id de la sede y el nombre del usuario que desea consultar.", "Precaución");
             }
             else if (result.StatusCode == HttpStatusCode.NotFound)
             {
@@ -91,8 +96,12 @@ namespace SegundoProyectoVisualStudio
                 textBox4.Text = jsonObj.fechaInscripcion.ToString();
                 textBox5.Text = jsonObj.mensualidad.ToString();
             }
+            else if (result.StatusCode == HttpStatusCode.NotFound)
+            {
+                MessageBox.Show("Usuario no encontrado.", "Error");
+            }
             else {
-                MessageBox.Show("Formato del nombre inválido.", "Error");
+                MessageBox.Show("Formato del id de la sede y/o nombre del usuario inválido.", "Error");
             }
         }
 
@@ -100,13 +109,13 @@ namespace SegundoProyectoVisualStudio
         {
             var options = new RestClientOptions("http://localhost:8080");
             var client = new RestClient(options);
-            var request = new RestRequest($"/controladorUsuario/buscarUsuarioIdNombre/{textBox1.Text}/{textBox2.Text}", Method.Get);
+            var request = new RestRequest($"/usuario/idNombre/{textBox6.Text}/{textBox1.Text}/{textBox2.Text}", Method.Get);
 
             RestResponse result = client.Execute(request);
 
-            if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "")
+            if (textBox6.Text.Trim() == "" || textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "")
             {
-                MessageBox.Show("Por favor digite el Id y el nombre del usuario que desea consultar.", "Precaución");
+                MessageBox.Show("Por favor digite el Id de la sede, el Id y el nombre del usuario que desea consultar.", "Precacuión");
             }
             else if (result.StatusCode == HttpStatusCode.NotFound)
             {
@@ -119,9 +128,13 @@ namespace SegundoProyectoVisualStudio
                 textBox4.Text = jsonObj.fechaInscripcion.ToString();
                 textBox5.Text = jsonObj.mensualidad.ToString();
             }
+            else if (result.StatusCode == HttpStatusCode.NotFound)
+            {
+                MessageBox.Show("Usuario no encontrado.", "Error");
+            }
             else
             {
-                MessageBox.Show("Formato del Id y/o nombre inválido.", "Error");
+                MessageBox.Show("Formato de los Id(s) y/o nombre inválido.", "Error");
             }
         }
     }

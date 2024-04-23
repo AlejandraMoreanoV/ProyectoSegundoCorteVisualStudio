@@ -41,22 +41,24 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            label6 = new Label();
+            textBox6 = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 20);
+            label1.Location = new Point(25, 52);
             label1.Name = "label1";
-            label1.Size = new Size(20, 15);
+            label1.Size = new Size(62, 15);
             label1.TabIndex = 0;
-            label1.Text = "Id:";
+            label1.Text = "Id usuario:";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 48);
+            label2.Location = new Point(25, 80);
             label2.Name = "label2";
             label2.Size = new Size(54, 15);
             label2.TabIndex = 1;
@@ -65,7 +67,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(25, 78);
+            label3.Location = new Point(25, 110);
             label3.Name = "label3";
             label3.Size = new Size(54, 15);
             label3.TabIndex = 2;
@@ -74,7 +76,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(25, 110);
+            label4.Location = new Point(25, 139);
             label4.Name = "label4";
             label4.Size = new Size(118, 15);
             label4.TabIndex = 3;
@@ -83,7 +85,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(25, 140);
+            label5.Location = new Point(25, 169);
             label5.Name = "label5";
             label5.Size = new Size(78, 15);
             label5.TabIndex = 4;
@@ -91,7 +93,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(149, 12);
+            textBox1.Location = new Point(149, 44);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(158, 23);
             textBox1.TabIndex = 5;
@@ -99,7 +101,7 @@
             // textBox2
             // 
             textBox2.Enabled = false;
-            textBox2.Location = new Point(149, 40);
+            textBox2.Location = new Point(149, 72);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(158, 23);
             textBox2.TabIndex = 6;
@@ -107,7 +109,7 @@
             // textBox3
             // 
             textBox3.Enabled = false;
-            textBox3.Location = new Point(149, 70);
+            textBox3.Location = new Point(149, 102);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(158, 23);
             textBox3.TabIndex = 7;
@@ -115,7 +117,7 @@
             // textBox4
             // 
             textBox4.Enabled = false;
-            textBox4.Location = new Point(149, 103);
+            textBox4.Location = new Point(149, 132);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(158, 23);
             textBox4.TabIndex = 8;
@@ -123,14 +125,14 @@
             // textBox5
             // 
             textBox5.Enabled = false;
-            textBox5.Location = new Point(149, 132);
+            textBox5.Location = new Point(149, 161);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(158, 23);
             textBox5.TabIndex = 9;
             // 
             // button1
             // 
-            button1.Location = new Point(149, 183);
+            button1.Location = new Point(149, 201);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 10;
@@ -140,7 +142,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(232, 183);
+            button2.Location = new Point(232, 201);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 11;
@@ -158,11 +160,30 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(25, 20);
+            label6.Name = "label6";
+            label6.Size = new Size(47, 15);
+            label6.TabIndex = 13;
+            label6.Text = "Id sede:";
+            label6.Click += label6_Click;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(149, 12);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(75, 23);
+            textBox6.TabIndex = 14;
+            // 
             // Eliminar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(433, 231);
+            ClientSize = new Size(433, 237);
+            Controls.Add(textBox6);
+            Controls.Add(label6);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -178,7 +199,7 @@
             Controls.Add(label1);
             Name = "Eliminar";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Eliminar";
+            Text = "Eliminar usuario";
             Load += Eliminar_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -199,5 +220,7 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Label label6;
+        private TextBox textBox6;
     }
 }
