@@ -29,23 +29,34 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 37);
+            label1.Location = new Point(33, 27);
             label1.Name = "label1";
             label1.Size = new Size(425, 15);
             label1.TabIndex = 0;
             label1.Text = "Proyecto desarrollado para el curso de desarrollo de aplicaciones empresariales.";
             label1.Click += label1_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(77, 53);
+            label2.Name = "label2";
+            label2.Size = new Size(344, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Elaborado por: Andrés Serna, Jafet Vergara y Alejandra Moreano.";
+            // 
             // AcercaDe
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(510, 89);
+            Controls.Add(label2);
             Controls.Add(label1);
             Name = "AcercaDe";
             StartPosition = FormStartPosition.CenterScreen;
@@ -57,5 +68,6 @@
         #endregion
 
         private Label label1;
+        private Label label2;
     }
 }
