@@ -35,37 +35,47 @@ namespace SegundoProyectoVisualStudio
                 {
                     dataGridView1.Rows.Clear();
                     foreach (var sede in sedes)
-                        if (sede.listaUsuarios.Count > 0)
-                        {
-                            foreach (var usuario in sede.listaUsuarios)
-                            {
-                                int n = dataGridView1.Rows.Add();
-                                dataGridView1.Rows[n].Cells[0].Value = sede.id;
-                                dataGridView1.Rows[n].Cells[1].Value = sede.direccion;
-                                dataGridView1.Rows[n].Cells[2].Value = sede.ciudad;
-                                dataGridView1.Rows[n].Cells[3].Value = sede.fechaRegistro.ToString();
-                                dataGridView1.Rows[n].Cells[4].Value = sede.m2.ToString();
-                                dataGridView1.Rows[n].Cells[5].Value = usuario.id;
-                                dataGridView1.Rows[n].Cells[6].Value = usuario.nombre;
-                                dataGridView1.Rows[n].Cells[7].Value = usuario.apellido;
-                                dataGridView1.Rows[n].Cells[8].Value = usuario.fechaInscripcion.ToString();
-                                dataGridView1.Rows[n].Cells[9].Value = usuario.mensualidad.ToString();
-                            }
-                        }
-                        else
-                        {
-                            int n = dataGridView1.Rows.Add();
-                            dataGridView1.Rows[n].Cells[0].Value = sede.id;
-                            dataGridView1.Rows[n].Cells[1].Value = sede.direccion;
-                            dataGridView1.Rows[n].Cells[2].Value = sede.ciudad;
-                            dataGridView1.Rows[n].Cells[3].Value = sede.fechaRegistro.ToString();
-                            dataGridView1.Rows[n].Cells[4].Value = sede.m2.ToString();
-                            //dataGridView1.Rows[n].Cells[5].Value = usuario.id;
-                            //dataGridView1.Rows[n].Cells[6].Value = usuario.nombre;
-                            //dataGridView1.Rows[n].Cells[7].Value = usuario.apellido;
-                            //dataGridView1.Rows[n].Cells[8].Value = usuario.fechaInscripcion.ToString();
-                            //dataGridView1.Rows[n].Cells[9].Value = usuario.mensualidad.ToString();
-                        }
+                    {
+                        int n = dataGridView1.Rows.Add();
+                        dataGridView1.Rows[n].Cells[0].Value = sede.id;
+                        dataGridView1.Rows[n].Cells[1].Value = sede.direccion;
+                        dataGridView1.Rows[n].Cells[2].Value = sede.ciudad;
+                        dataGridView1.Rows[n].Cells[3].Value = sede.fechaRegistro.ToString();
+                        dataGridView1.Rows[n].Cells[4].Value = sede.m2.ToString();
+                    }
+                    //if (sede.listaUsuarios.Count > 0)
+                    //{
+                    //foreach (var usuario in sede.listaUsuarios)
+                    //{
+                    //int n = dataGridView1.Rows.Add();
+                    //dataGridView1.Rows[n].Cells[0].Value = sede.id;
+                    //dataGridView1.Rows[n].Cells[1].Value = sede.direccion;
+                    //dataGridView1.Rows[n].Cells[1].Value = sede.direccion;
+                    //dataGridView1.Rows[n].Cells[1].Value = sede.direccion;
+                    //dataGridView1.Rows[n].Cells[2].Value = sede.ciudad;
+                    //dataGridView1.Rows[n].Cells[3].Value = sede.fechaRegistro.ToString();
+                    //dataGridView1.Rows[n].Cells[4].Value = sede.m2.ToString();
+                    //dataGridView1.Rows[n].Cells[5].Value = usuario.id;
+                    //dataGridView1.Rows[n].Cells[6].Value = usuario.nombre;
+                    //dataGridView1.Rows[n].Cells[7].Value = usuario.apellido;
+                    //dataGridView1.Rows[n].Cells[8].Value = usuario.fechaInscripcion.ToString();
+                    //dataGridView1.Rows[n].Cells[9].Value = usuario.mensualidad.ToString();
+                    //}
+                    //}
+                    //else
+                    //{
+                    //int n = dataGridView1.Rows.Add();
+                    //dataGridView1.Rows[n].Cells[0].Value = sede.id;
+                    //dataGridView1.Rows[n].Cells[1].Value = sede.direccion;
+                    //dataGridView1.Rows[n].Cells[2].Value = sede.ciudad;
+                    //dataGridView1.Rows[n].Cells[3].Value = sede.fechaRegistro.ToString();
+                    //dataGridView1.Rows[n].Cells[4].Value = sede.m2.ToString();
+                    //dataGridView1.Rows[n].Cells[5].Value = usuario.id;
+                    //dataGridView1.Rows[n].Cells[6].Value = usuario.nombre;
+                    //dataGridView1.Rows[n].Cells[7].Value = usuario.apellido;
+                    //dataGridView1.Rows[n].Cells[8].Value = usuario.fechaInscripcion.ToString();
+                    //dataGridView1.Rows[n].Cells[9].Value = usuario.mensualidad.ToString();
+                    //}
                 }
             }
             else 
@@ -102,6 +112,15 @@ namespace SegundoProyectoVisualStudio
                 if (sedes.Count > 0)
                 {
                     foreach (var sede in sedes)
+                    {
+                        int n = dataGridView1.Rows.Add();
+                        dataGridView1.Rows[n].Cells[0].Value = sede.id;
+                        dataGridView1.Rows[n].Cells[1].Value = sede.direccion;
+                        dataGridView1.Rows[n].Cells[2].Value = sede.ciudad;
+                        dataGridView1.Rows[n].Cells[3].Value = sede.fechaRegistro.ToString();
+                        dataGridView1.Rows[n].Cells[4].Value = sede.m2.ToString();
+                    }
+                        /*
                         if (sede.listaUsuarios.Count > 0)
                         {
                             foreach (var usuario in sede.listaUsuarios)
@@ -132,6 +151,7 @@ namespace SegundoProyectoVisualStudio
                             //dataGridView1.Rows[n].Cells[8].Value = usuario.fechaInscripcion.ToString();
                             //dataGridView1.Rows[n].Cells[9].Value = usuario.mensualidad.ToString();
                         }
+                        */
                 }
                 else {
                     MessageBox.Show("No hay sedes para listar.");

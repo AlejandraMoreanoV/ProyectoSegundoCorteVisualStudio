@@ -29,87 +29,27 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            idSede = new DataGridViewTextBoxColumn();
-            direccion = new DataGridViewTextBoxColumn();
-            ciudad = new DataGridViewTextBoxColumn();
-            fechaRegistro = new DataGridViewTextBoxColumn();
-            m2 = new DataGridViewTextBoxColumn();
-            idUsuario = new DataGridViewTextBoxColumn();
-            nombre = new DataGridViewTextBoxColumn();
-            apellido = new DataGridViewTextBoxColumn();
-            fechaInscripcion = new DataGridViewTextBoxColumn();
-            mensualidad = new DataGridViewTextBoxColumn();
             label1 = new Label();
             textBox1 = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            idSede = new DataGridViewTextBoxColumn();
+            direccion = new DataGridViewTextBoxColumn();
+            ciudad = new DataGridViewTextBoxColumn();
+            fechaRegistro = new DataGridViewTextBoxColumn();
+            m2 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idSede, direccion, ciudad, fechaRegistro, m2, idUsuario, nombre, apellido, fechaInscripcion, mensualidad });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idSede, direccion, ciudad, fechaRegistro, m2 });
             dataGridView1.Location = new Point(12, 102);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(932, 199);
+            dataGridView1.Size = new Size(585, 199);
             dataGridView1.TabIndex = 0;
-            // 
-            // idSede
-            // 
-            idSede.HeaderText = "Id sede";
-            idSede.Name = "idSede";
-            idSede.Width = 40;
-            // 
-            // direccion
-            // 
-            direccion.HeaderText = "Dirección";
-            direccion.Name = "direccion";
-            direccion.Width = 150;
-            // 
-            // ciudad
-            // 
-            ciudad.HeaderText = "Ciudad";
-            ciudad.Name = "ciudad";
-            // 
-            // fechaRegistro
-            // 
-            fechaRegistro.HeaderText = "Fecha de registro";
-            fechaRegistro.Name = "fechaRegistro";
-            fechaRegistro.Width = 150;
-            // 
-            // m2
-            // 
-            m2.HeaderText = "Área (m2)";
-            m2.Name = "m2";
-            // 
-            // idUsuario
-            // 
-            idUsuario.HeaderText = "Id usuario";
-            idUsuario.Name = "idUsuario";
-            idUsuario.Width = 50;
-            // 
-            // nombre
-            // 
-            nombre.HeaderText = "Nombre";
-            nombre.Name = "nombre";
-            // 
-            // apellido
-            // 
-            apellido.HeaderText = "Apellido";
-            apellido.Name = "apellido";
-            // 
-            // fechaInscripcion
-            // 
-            fechaInscripcion.HeaderText = "Fecha de inscripción";
-            fechaInscripcion.Name = "fechaInscripcion";
-            fechaInscripcion.Width = 150;
-            // 
-            // mensualidad
-            // 
-            mensualidad.HeaderText = "Mensualidad";
-            mensualidad.Name = "mensualidad";
             // 
             // label1
             // 
@@ -149,7 +89,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(869, 315);
+            button3.Location = new Point(522, 315);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 5;
@@ -157,11 +97,39 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // idSede
+            // 
+            idSede.HeaderText = "Id sede";
+            idSede.Name = "idSede";
+            idSede.Width = 40;
+            // 
+            // direccion
+            // 
+            direccion.HeaderText = "Dirección";
+            direccion.Name = "direccion";
+            direccion.Width = 150;
+            // 
+            // ciudad
+            // 
+            ciudad.HeaderText = "Ciudad";
+            ciudad.Name = "ciudad";
+            // 
+            // fechaRegistro
+            // 
+            fechaRegistro.HeaderText = "Fecha de registro";
+            fechaRegistro.Name = "fechaRegistro";
+            fechaRegistro.Width = 150;
+            // 
+            // m2
+            // 
+            m2.HeaderText = "Área (m2)";
+            m2.Name = "m2";
+            // 
             // ListarSedes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(956, 350);
+            ClientSize = new Size(611, 350);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -189,10 +157,5 @@
         private DataGridViewTextBoxColumn ciudad;
         private DataGridViewTextBoxColumn fechaRegistro;
         private DataGridViewTextBoxColumn m2;
-        private DataGridViewTextBoxColumn idUsuario;
-        private DataGridViewTextBoxColumn nombre;
-        private DataGridViewTextBoxColumn apellido;
-        private DataGridViewTextBoxColumn fechaInscripcion;
-        private DataGridViewTextBoxColumn mensualidad;
     }
 }
